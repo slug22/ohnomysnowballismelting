@@ -11,7 +11,7 @@ def print_radial_histogram(countmap, radius=15):
     grid = [[' ' for _ in range(grid_size)] for _ in range(grid_size)]
     center = grid_size // 2
     isdone = True
-    num_points = 110  # doubled from 55
+    num_points = 110  
     
     for i in range(num_points):
         angle = 2 * math.pi * i / num_points
@@ -22,7 +22,7 @@ def print_radial_histogram(countmap, radius=15):
         length = min(round(countmap[orig_idx] / 10), radius)
         
         for r in range(length * 2):
-            # Adjust x,y calculation for better circle shape
+           
             x = center + round(math.cos(angle) * r * 0.5)
             y = center + round(math.sin(angle) * r * 0.25)              
             if 0 <= x < grid_size and 0 <= y < grid_size:
