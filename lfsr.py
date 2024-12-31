@@ -1,6 +1,7 @@
 import math
 import random
 #assuming dice
+#change below!!
 dice_sides = 60
 dice_rolled = 3
 
@@ -18,7 +19,7 @@ def print_radial_histogram(countmap, radius=15):
         orig_idx = (i * max_sum) // num_points
         if orig_idx >= max_sum:
             continue
-            
+            # you might have to change this divisor too <3
         length = min(round(countmap[orig_idx] / 10), radius)
         
         for r in range(length * 2):
@@ -44,6 +45,7 @@ for melting in range(100):
     for _ in range(10000):
         yuh = 0
         for _ in range(dice_rolled):
+            #change this for funky results
             yuh += random.randint(0, dice_sides)
         
         
